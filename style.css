@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand');
 
 body {
     background: url("Images/welcome.jpg");
     background-size: 1700px;
-  }
-  table {
-    
+    font-family: 'Patrick Hand', cursive;
   }
   /* The background behind "screen" */
   .screen {
@@ -61,11 +60,12 @@ body {
     background: url("Images/background.jpg");
     background-size: 1000px;
     position: relative;
-    font-family: 'Pangolin', cursive;
-    font-size: 15px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 70px;
     background-color: #fefefe;
     margin: auto;
-    border-radius: 100px;
+    border-radius: 120px;
+    border: 10px solid black;
     width: 900px;
     height: 500px;
     padding: 50px;
@@ -73,3 +73,14 @@ body {
   }
 
   button:focus {outline:0;} /* No outline */
+
+  .pic {
+    height:280px;
+    width: 280px;
+    border-radius: 40px;
+    border: 10px solid black;
+  }
+
+  #gamelink {
+    font-size: 10px;
+  }
