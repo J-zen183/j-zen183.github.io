@@ -11,7 +11,58 @@
     <div class="screen">
       <div class="screen-content">
       <center>
+        <div id="chooseTheme">
+          <table width="100%">
+            <tr>
+              <td align="center" valign="middle" height="350px"><button onclick="chooseV()" class="pic" id="air">pic of air</td>
+              <td align="center"><button onclick="chooseV()" class="pic" id="jungle">pic of jungle</button></td>
+              <td align="center"><button onclick="chooseV()" class="pic" id="water">pic of water</button></td>
+            </tr>
+            <tr>
+              <td align="center">AIR</td>
+              <td align="center">JUNGLE</td>
+              <td align="center">WATER</td>
+            </tr>
+          </table>
+        </div>
+          <div id="airVehicle" hidden> 
+            <table width="100%">
+              <tr>
+                <td align="center" valign="middle" height="350px"><button onclick="planeStart()" class="pic">pic of plane</td>
+                <td align="center"><button onclick="jetStart()" class="pic">pic of jet</button></td>
+              </tr>
+              <tr>
+                <td align="center">PLANE</td>
+                <td align="center">JET</td>
+              </tr>
+            </table>
+          </div>
+          <div id="jungleVehicle" hidden> 
+            <table width="100%">
+              <tr>
+                <td align="center" valign="middle" height="350px"><button onclick="planeStart()" class="pic">pic of jeep</td>
+                <td align="center"><button onclick="jetStart()" class="pic">pic of motorcycle</button></td>
+              </tr>
+              <tr>
+                <td align="center">JEEP</td>
+                <td align="center">MOTORCYCLE</td>
+              </tr>
+            </table>
+          </div>
+          <div id="waterVehicle" hidden> 
+            <table width="100%">
+              <tr>
+                <td align="center" valign="middle" height="350px"><button onclick="planeStart()" class="pic">pic of ship</td>
+                <td align="center"><button onclick="jetStart()" class="pic">pic of idk</button></td>
+              </tr>
+              <tr>
+                <td align="center">SHIP</td>
+                <td align="center">IDK</td>
+              </tr>
+            </table>
+          </div>
         </center>
+        <a id = "gamelink" href = "game.html">game</a>
     </div>
     </div>
   </body>
