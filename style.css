@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Patrick+Hand');
 
+html, body {
+  overflow: hidden;
+}
+
 body {
     background: url("Images/welcome.jpg");
     background-size: 1700px;
@@ -79,6 +83,28 @@ body {
     width: 280px;
     border-radius: 40px;
     border: 10px solid black;
+  }
+  #plane {
+    background:url("images/plane.png") no-repeat;
+    background-size: 380px;
+    vertical-align: middle;
+    width: 400px;
+  }
+  #rocket {
+    background: url("images/rocket.png") no-repeat;
+    background-size: 280px;
+    vertical-align: middle;
+    width: 300px;
+  }
+  #jeep {
+    background: url("images/jeep.png") no-repeat;
+    background-size: 340px;
+    width: 400px;
+  }
+  #ship {
+    background: url("images/ship.png") no-repeat;
+    background-size: 250px;
+    width:300px;
   }
 
   #gamelink {
