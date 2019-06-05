@@ -8,15 +8,15 @@
   </head>
   <body>
     <script src="script.js"></script>
-    <div class="screen">
+    <div class="screen" id="choice">
       <div class="screen-content">
       <center>
         <div id="chooseTheme">
           <table width="100%">
             <tr>
-              <td align="center" valign="middle" height="350px"><button onclick="chooseV()" class="pic" id="air">pic of air</td>
-              <td align="center"><button onclick="chooseV()" class="pic" id="jungle">pic of jungle</button></td>
-              <td align="center"><button onclick="chooseV()" class="pic" id="water">pic of water</button></td>
+              <td align="center" valign="middle" height="350px"><button onclick="chooseV1()" class="pic" >pic of air</td>
+              <td align="center"><button onclick="chooseV2()" class="pic" >pic of jungle</button></td>
+              <td align="center"><button onclick="chooseV3()" class="pic" >pic of water</button></td>
             </tr>
             <tr>
               <td align="center">AIR</td>
@@ -28,20 +28,20 @@
           <div id="airVehicle" hidden> 
             <table width="100%">
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="planeStart()" class="pic">pic of plane</td>
-                <td align="center"><button onclick="jetStart()" class="pic">pic of jet</button></td>
+                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="pic" id="plane"></button></td>
+                <td align="center"><button onclick="startGame(this.id)" class="pic" id="rocket"></button></td>
               </tr>
               <tr>
                 <td align="center">PLANE</td>
-                <td align="center">JET</td>
+                <td align="center">ROCKET</td>
               </tr>
             </table>
           </div>
           <div id="jungleVehicle" hidden> 
             <table width="100%">
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="planeStart()" class="pic">pic of jeep</td>
-                <td align="center"><button onclick="jetStart()" class="pic">pic of motorcycle</button></td>
+                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="pic" id="jeep"></td>
+                <td align="center"><button onclick="startGame(this.id)" class="pic" id="motorcycle">pic of motorcycle</button></td>
               </tr>
               <tr>
                 <td align="center">JEEP</td>
@@ -52,17 +52,18 @@
           <div id="waterVehicle" hidden> 
             <table width="100%">
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="planeStart()" class="pic">pic of ship</td>
-                <td align="center"><button onclick="jetStart()" class="pic">pic of idk</button></td>
+                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="pic" id="ship"></td>
+                <td align="center"><button onclick="jetStart()" class="pic">pic of swimmer</button></td>
               </tr>
               <tr>
                 <td align="center">SHIP</td>
-                <td align="center">IDK</td>
+                <td align="center">SWIMMER</td>
               </tr>
             </table>
           </div>
         </center>
         <a id = "gamelink" href = "game.html">game</a>
+        <a href = "try.html">Trying</a>
     </div>
     </div>
   </body>
