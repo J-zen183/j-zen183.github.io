@@ -6,65 +6,92 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body onload="start()">
+    <img id="background">
     <script src="script.js"></script>
     <div class="screen" id="choice">
-      <div class="screen-content">
+      <div id="screen-content">
       <center>
-        <div id="chooseTheme">
+        <div id="intro">
+          <br><br>
+          <a href="#" id="themeBtn"><span>Choose Theme</span></a>
+        </div>
+        <div id="chooseTheme" hidden>
           <table width="100%">
             <tr>
-              <td align="center" valign="middle" height="350px"><button onclick="chooseV1()" class="pic" >pic of air</td>
-              <td align="center"><button onclick="chooseV2()" class="pic" >pic of jungle</button></td>
-              <td align="center"><button onclick="chooseV3()" class="pic" >pic of water</button></td>
+              <td colspan="3" align="center"><span id="head">Choose a Theme</span></td>
             </tr>
             <tr>
-              <td align="center">AIR</td>
-              <td align="center">JUNGLE</td>
-              <td align="center">WATER</td>
+              <td align="center" valign="middle" height="350px"><button onclick="chooseV1()" class="pic" id="air"></td>
+              <td align="center"><button onclick="chooseV2()" class="pic" id="jungle"></button></td>
+              <td align="center"><button onclick="chooseV3()" class="pic" id="water"></button></td>
             </tr>
+            <tr>
+              <td align="left"><button onclick="toIntro()" class="backBtn"><span> Back</span></button></td>
+            <tr>
           </table>
         </div>
           <div id="airVehicle" hidden> 
             <table width="100%">
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="pic" id="plane"></button></td>
-                <td align="center"><button onclick="startGame(this.id)" class="pic" id="rocket"></button></td>
+              <td colspan="3" align="center"><span id="head">Choose a Vehicle</span></td>
+            </tr>
+              <tr>
+                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="plane"></button></td>
+                <td align="center"><button onclick="startGame(this.id)" class="picV" id="rocket"></button></td>
               </tr>
               <tr>
-                <td align="center">PLANE</td>
-                <td align="center">ROCKET</td>
-              </tr>
+                <td><button onclick="toTheme()" class="backBtn"><span> Back</span></button></td>
+             <tr>
             </table>
           </div>
           <div id="jungleVehicle" hidden> 
             <table width="100%">
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="pic" id="jeep"></td>
-                <td align="center"><button onclick="startGame(this.id)" class="pic" id="motorcycle">pic of motorcycle</button></td>
+              <td colspan="3" align="center"><span id="head">Choose a Vehicle</span></td>
+            </tr>
+              <tr>
+              <tr>
+                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="jeep"></td>
+                <td align="center"><button onclick="startGame(this.id)" class="picV" id="motorcycle">pic of motorcycle</button></td>
               </tr>
               <tr>
-                <td align="center">JEEP</td>
-                <td align="center">MOTORCYCLE</td>
-              </tr>
+                <td><button onclick="toTheme()" class="backBtn"><span> Back</span></button></td>
+             <tr>
             </table>
           </div>
           <div id="waterVehicle" hidden> 
             <table width="100%">
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="pic" id="ship"></td>
-                <td align="center"><button onclick="jetStart()" class="pic">pic of swimmer</button></td>
+              <td colspan="3" align="center"><span id="head">Choose a Vehicle</span></td>
+             </tr>
+              <tr>
+              <tr>
+                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="ship"></td>
+                <td align="center"><button onclick="startGame(this.id)" class="picV">pic of swimmer</button></td>
               </tr>
               <tr>
-                <td align="center">SHIP</td>
-                <td align="center">SWIMMER</td>
-              </tr>
+                <td><button onclick="toTheme()" class="backBtn"><span> Back</span></button></td>
+             <tr>
             </table>
           </div>
         </center>
-        <a id = "gamelink" href = "game.html">game</a>
-        <a href = "try.html">Trying</a>
     </div>
     </div>
+  </canvas>
+  <div id="myModal" class="modal">
+  <center>
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <p id="score"></p>
+        <button onclick="toTheme()" class="backBtn"><span> Back</span></button>
+        <br><br>
+      </div>
+    </div>
+  </center>
+  </div>
+
   </body>
 </html>
