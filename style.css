@@ -5,11 +5,33 @@ html, body {
   overflow: hidden;
 }
 
-body {
-    background: url("Images/welcome.jpg");
-    background-size: 1700px;
-    font-family: 'Patrick Hand', cursive;
-  }
+#background {
+    width: 100%;
+    height: 75%;
+}
+
+canvas {
+  position: absolute;
+}
+
+#head {
+  color: white;
+  background: rgba(0,0,0,0.8);
+}
+
+button {
+  opacity: .9;
+  transition: opacity .3s ease-out;
+  -moz-transition: opacity .3s ease-out;
+  -webkit-transition: opacity .3s ease-out;
+  -o-transition: opacity .3s ease-out;
+}
+button:focus {outline:0;} /* No outline */
+button:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
   /* The background behind "screen" */
   .screen {
     position: fixed; /* Stay in place */
@@ -24,49 +46,12 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   /* The "screen"'s content' */
-  .screen-content {
-    background: url("Images/background.jpg");
-    background-size: 1000px;
-    position: relative;
-    font-family: 'Pangolin', cursive;
-    font-size: 15px;
-    background-color: #fefefe;
-    margin: auto;
-    border-radius: 100px;
-    width: 900px;
-    height: 500px;
-    padding: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  }
-
-  button:focus {outline:0;} /* No outline */
-@import url('https://fonts.googleapis.com/css?family=Pangolin');
-
-body {
-    background: url("Images/welcome.jpg");
-    background-size: 1700px;
-  }
-  /* The background behind "screen" */
-  .screen {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  /* The "screen"'s content' */
-  .screen-content {
-    background: url("Images/background.jpg");
+  #screen-content {
+    background: url("images/intro2.png");
     background-size: 1000px;
     position: relative;
     font-family: 'Fredoka One', cursive;
     font-size: 70px;
-    background-color: #fefefe;
     margin: auto;
     border-radius: 120px;
     border: 10px solid black;
@@ -75,15 +60,34 @@ body {
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   }
-
-  button:focus {outline:0;} /* No outline */
-
   .pic {
     height:280px;
     width: 280px;
     border-radius: 40px;
-    border: 10px solid black;
+    border: 10px solid white;
+    transition: transform .3s;
   }
+  .picV {
+    height:280px;
+    width: 280px;
+    border: none;
+    transition: transform .3s;
+  }
+
+  #air {
+    background: url("images/night.jpg");
+    background-size: 180%;
+  }
+
+  #jungle {
+    background: url("images/jungle.jpg");
+    background-size: 210%;
+  }
+
+  #water {
+    background: url("images/water.jpg");
+  }
+
   #plane {
     background:url("images/plane.png") no-repeat;
     background-size: 380px;
@@ -110,3 +114,161 @@ body {
   #gamelink {
     font-size: 10px;
   }
+
+  #themeBtn {
+    display: inline-block;
+    margin-top: 20%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow:    0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 50px;
+    color: #fff;
+}
+
+#themeBtn span {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #ec528d;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(338, 90%, 80%, .8)), to(hsla(338, 90%, 70%, .2)));
+    background-image: -webkit-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    background-image: -moz-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    background-image: -o-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Patrick Hand', cursive;    
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(175, 49, 95, .7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
+#themeBtn:hover span {
+    background-color: #ec6a9c;
+    text-shadow: 0 -1px 1px rgba(175, 49, 95, .9), 0 0 5px rgba(255, 255, 255, .8);
+}
+
+#themeBtn:active, #themeBtn:focus {
+    -webkit-box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+}
+
+#themeBtn:active span {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+.backBtn {
+  border-radius: 10px;
+  font-family: 'Patrick Hand', cursive;
+  background-color: #ec528d;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.backBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.backBtn span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.backBtn:hover span {
+  padding-left: 25px;
+}
+
+.backBtn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  font-family: 'Pangolin', cursive;
+  margin: auto;
+  border-radius: 100px;
+  border: 5px solid black;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Buttons in modal */
+.btn {
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  font-size: 30px;
+  color: #666666;
+  font-family: 'Pangolin', cursive;
+  background: none;
+  border: 3px solid #666666;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #D9EBFD;
+}
