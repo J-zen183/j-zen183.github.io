@@ -14,12 +14,12 @@
       <center>
         <div id="intro">
           <br><br>
-          <a href="#" id="themeBtn"><span>Choose Theme</span></a>
+          <a href="#" id="themeBtn"><span>Start Game</span></a>
         </div>
         <div id="chooseTheme" hidden>
           <table width="100%">
             <tr>
-              <td colspan="3" align="center"><span id="head">Choose a Theme</span></td>
+              <td colspan="3" align="center"><span class="head">Choose a Theme</span><Br></td>
             </tr>
             <tr>
               <td align="center" valign="middle" height="350px"><button onclick="chooseV1()" class="pic" id="air"></td>
@@ -31,10 +31,10 @@
             <tr>
           </table>
         </div>
-          <div id="airVehicle" hidden> 
+          <div id="airVehicle" hidden>
             <table width="100%">
               <tr>
-              <td colspan="3" align="center"><span id="head">Choose a Vehicle</span></td>
+              <td colspan="2" align="center"><span class="head">Choose a Vehicle</span></td>
             </tr>
               <tr>
                 <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="plane"></button></td>
@@ -45,30 +45,30 @@
              <tr>
             </table>
           </div>
-          <div id="jungleVehicle" hidden> 
+          <div id="jungleVehicle" hidden>
             <table width="100%">
               <tr>
-              <td colspan="3" align="center"><span id="head">Choose a Vehicle</span></td>
+              <td colspan="2" align="center"><span class="head">Choose a Vehicle</span></td>
             </tr>
               <tr>
               <tr>
                 <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="jeep"></td>
-                <td align="center"><button onclick="startGame(this.id)" class="picV" id="motorcycle">pic of motorcycle</button></td>
+                <td align="center"><button onclick="startGame(this.id)" class="picV" id="motorcycle"></td>
               </tr>
               <tr>
                 <td><button onclick="toTheme()" class="backBtn"><span> Back</span></button></td>
              <tr>
             </table>
           </div>
-          <div id="waterVehicle" hidden> 
+          <div id="waterVehicle" hidden>
             <table width="100%">
               <tr>
-              <td colspan="3" align="center"><span id="head">Choose a Vehicle</span></td>
+              <td colspan="2" align="center"><span class="head">Choose a Vehicle</span></td>
              </tr>
               <tr>
               <tr>
-                <td align="center" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="ship"></td>
-                <td align="center"><button onclick="startGame(this.id)" class="picV">pic of swimmer</button></td>
+                <td align="right" valign="middle" height="350px"><button onclick="startGame(this.id)" class="picV" id="ship"></td>
+                <td align="center"><button onclick="startGame(this.id)" class="picV" id="boat"></button></td>
               </tr>
               <tr>
                 <td><button onclick="toTheme()" class="backBtn"><span> Back</span></button></td>
@@ -76,22 +76,19 @@
             </table>
           </div>
         </center>
+       <input type="hidden" id="selectId" name="selectId" value="">
     </div>
     </div>
   </canvas>
   <div id="myModal" class="modal">
   <center>
-    <!-- Modal content -->
     <div class="modal-content">
-
-      <div class="modal-body">
-        <p id="score"></p>
-        <button onclick="toTheme()" class="backBtn"><span> Back</span></button>
+        <p id="userScore" class="score"></p>
+        <p>Highest Score: <span id="highScore"></span></p>
+        <button onclick="backHome()" class="backBtn"><span> Home</span></button>
+        <button onclick="replay()" class="backBtn"><span> Replay</span></button>
         <br><br>
-      </div>
-    </div>
-  </center>
   </div>
-
+</center>
   </body>
 </html>
